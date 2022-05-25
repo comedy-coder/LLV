@@ -1,5 +1,42 @@
 @use "variable";
+.ant-btn.ant-btn-default{
+  background: linear-gradient(180deg, #FFF613 0%, #F37500 100%);
+  box-shadow: 0px 0.398329px 1.19499px rgba(0, 0, 0, 0.3);
+  border-radius: 6.61603px;
+  width: 107.14px;
+height: 28.41px;
+transform: translateY(50px);
 
+border: none;
+  &::before{
+    content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: -10px;
+  background-image: linear-gradient(to right top, #FEFF0B 100% , #FFDF00A1 63%);
+  border-radius: inherit;
+  }
+span{
+  background: linear-gradient(180deg, #BC000E 20.36%, #D60D00 149.21%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+
+
+} 
+&:hover{
+  background: linear-gradient(180deg, #FFF613 0%, #F37500 100%);
+  border: none;
+  span{
+    background: linear-gradient(180deg, #BC000E 20.36%, #D60D00 149.21%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+
+  }
+}
+}
 .ant-btn,
 button.ant-btn.normal-button,
 .ant-modal-confirm-btns button.ant-btn,

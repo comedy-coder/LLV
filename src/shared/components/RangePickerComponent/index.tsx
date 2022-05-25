@@ -3,7 +3,7 @@ import { DatePicker } from 'antd';
 import * as Unicons from '@iconscout/react-unicons';
 export interface IRangerPicker {
   value?: any;
-  onChange?: (value) => void;
+  onChange?: (value: any) => void;
   defaultValue?: any;
   textLabel?: string;
   className?: string;
@@ -16,7 +16,7 @@ const RangePickerComponent = (props: IRangerPicker) => {
     setValue(props.value);
   }, [props.value]);
 
-  const onChange = pValue => {
+  const onChange = (pValue: any) => {
     setValue(pValue);
     if (props.onChange) {
       props.onChange(pValue);
