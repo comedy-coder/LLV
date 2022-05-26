@@ -1,7 +1,7 @@
 import { IRouter } from '@routers/interface';
 
-export const routerDash: IRouter = {
-  path: '/dash',
+export const routerCharecter: IRouter = {
+  path: '/charecter',
   loader: import('./index'),
   exact: true,
 };

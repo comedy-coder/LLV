@@ -1,14 +1,16 @@
 .homepage{
     width: calc(100% - 32px);
     height: 100%;
-background-image: url(../../shared/assets/images/default-banner.png);
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
+position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
 margin-left: 16px;
 
+
+}
+.bg-image{
+position: absolute;
+top :39%;
 
 }
