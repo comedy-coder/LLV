@@ -4,10 +4,29 @@
 .hero-slider{
     height: 100vh;
     width: 100vw;
-    max-height: 1080px;
+   
     overflow: hidden;
     position: relative;
-    &__button1 {
+    background-image: url(../../shared/assets/images/bg-guide.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    
+    &__title{
+        font-weight: 900;
+font-size: 24px;
+line-height: 33px;
+
+margin-top: 65px;
+text-align: center;
+
+/* red-text */
+
+color: #C2030B;
+    }
+        &__button1 {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,8 +37,8 @@
         @include respond(smallest-screen){
             top:8px;
         }
-        @include respond(xxs-screen){
-            top:4px;
+        @include respond(small-screen){
+            left:25px;
         }
     }
     &__position{
@@ -41,6 +60,12 @@
     justify-content: center;
     position: absolute ;
     top:60%;
+    @include respond(smallest-screen){
+        top:8px;
+    }
+    @include respond(small-screen){
+        top:64%;
+    }
     }
     &__button{
         width: 8px;
@@ -78,14 +103,16 @@
         pointer-events: none;
         position: absolute;
         inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 130px;
+        flex-direction: column;
         &.active {
             opacity: 1;
             visibility: visible;
             pointer-events: visible;
-            img{
-                height: 100%;
-                width: 100%;
-            }
+           
         }
     }
 }

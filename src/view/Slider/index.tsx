@@ -1,4 +1,4 @@
-import { next, playnow } from '@assets/images';
+import { next, playnow, test } from '@assets/images';
 import Button from '@view/Button';
 import React, { useEffect, useState, useCallback } from 'react';
 import { useHistory } from 'react-router';
@@ -7,13 +7,15 @@ import { HeroSliderProps, HeroSliderItemProps } from './interface';
 import './styles.scss';
 const HeroSlider = ({ data, control }: HeroSliderProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const history = useHistory();
   const handleChosen = (index: any) => {
     setActiveIndex(index);
   };
   const handleNext = () => {
     activeIndex > 2 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1);
+    activeIndex === 3 ? history.push('/') : setActiveIndex(activeIndex + 1);
   };
-  const history = useHistory();
+
   const handleBack = () => {
     history.push('/');
   };
@@ -38,6 +40,7 @@ const HeroSlider = ({ data, control }: HeroSliderProps) => {
       <div className="hero-slider__button1">
         <Button icon={arrow} handleClick={handleBack} />
       </div>
+      <span className="hero-slider__title">Hướng dẫn</span>
       {data.map((item, index) => (
         <HeroSliderItem key={index} active={index === activeIndex} item={item} />
       ))}
@@ -70,6 +73,7 @@ const HeroSliderItem = ({ item, active }: HeroSliderItemProps) => {
   return (
     <div className={`hero-slider__item ${active ? 'active' : ''}`}>
       <img srcSet={`${item.bg} 2x`} alt="" />
+      <img srcSet={`${test} 2x`} alt="" />
     </div>
   );
 };
