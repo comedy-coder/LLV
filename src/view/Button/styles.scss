@@ -1,0 +1,42 @@
+
+.btn {
+    background: linear-gradient(180deg, #FFF613 0%, #F37500 100%);
+    box-shadow: 0px 0.398329px 1.19499px rgba(0, 0, 0, 0.3);
+    border-radius: 36px;
+    transform: translate(-140px,40px);  
+    min-width: 55px ;
+    height: 46px;
+  
+    &__txt {
+        line-height: 1.5rem;
+    }
+    
+    &.bd-red {
+        border: solid 1.5px #FF9138;
+        color: #FF9138;
+    }
+    &.cl-orange {
+      
+        color: #FF7506;
+    }
+    &.sz-medium {
+            display: flex;
+            align-items: center;
+            padding: 4.5px 28px 12.5px 28px;
+            font-size: 16px;
+            
+            transform: translate(0,40px); 
+    }
+    &.sz-small {
+        display: flex;
+        align-items: center;
+            height: 48px;
+            font-size: 16px;
+            width: 115px;
+            padding: 13px 28.5px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 21.82px;
+    }
+    
+}

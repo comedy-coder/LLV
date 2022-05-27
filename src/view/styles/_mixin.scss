@@ -76,6 +76,21 @@
       @content
     }
   };
+  @if $breakpoint==xxs-screen {
+    @media only screen and (max-width: 400px) {
+      @content
+    }
+  };
+  @if $breakpoint==small-screen {
+    @media only screen and (max-width: 376px) {
+      @content
+    }
+  };
+  @if $breakpoint==smallest-screen {
+    @media only screen and (max-width: 361px) {
+      @content
+    }
+  };
 
   // screen ≥ 576px
   @if $breakpoint==sm-screen {

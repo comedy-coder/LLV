@@ -1,4 +1,3 @@
-import { Button } from 'antd';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import {
@@ -12,10 +11,12 @@ import {
   man,
   Text1,
   tree,
+  bgbottom,
 } from '../../shared/assets/images';
 import Accessories from './accessoriesgroup';
 import { rau1, rau2 } from '../../shared/assets/images';
 import './styles.scss';
+import Button from '@view/Button';
 const Charecter = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const Chosen = [
@@ -62,6 +63,9 @@ const Charecter = () => {
   const handleBack = () => {
     history.push('/');
   };
+  const handleNext = () => {
+    history.push('/guide');
+  };
 
   const handleChosen = (index: any) => {
     setActiveIndex(index);
@@ -70,15 +74,15 @@ const Charecter = () => {
   return (
     <div className="main-charecter">
       <div className="main-charecter__header">
-        <Button type="primary" onClick={handleBack}>
-          <img srcSet={`${arrow} 2x`} alt="" />
-        </Button>
+        <Button icon={arrow} handleClick={handleBack} />
+
         <h3>TẠO NHÂN VẬT</h3>
         <h2>LÊN ĐỒ LẮC LỘC NÀO ANH EM ƠI!</h2>
         <span>Anh em đã sẵn sàng lắc lộc chưa,</span>
         <span>lên đồ ngay nhé!</span>
       </div>
       <div className="main-charecter__body">
+        <img srcSet={`${bgbottom} 2x`} alt="" className="main-charecter__body__bgbt" />
         <img srcSet={`${circle} 2x`} alt="" className="main-charecter__body__circle" />
         <img srcSet={`${clound} 2x`} alt="" className="main-charecter__body__clound" />
         <img srcSet={`${man} 2x`} alt="" className="main-charecter__body__man" />
@@ -114,9 +118,7 @@ const Charecter = () => {
           ),
         )}
       </div>
-      <Button value="lagre">
-        <img srcSet={`${Text1} 2x`} alt="" />
-      </Button>
+      <Button handleClick={handleNext} icon={Text1} size={'medium'} />
     </div>
   );
 };

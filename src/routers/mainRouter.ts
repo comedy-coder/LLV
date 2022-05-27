@@ -1,3 +1,4 @@
+import { routerGuide } from './../view/Guide/router';
 
 
 import { routerViewProfile } from '@view/Auth/Profile/router';
@@ -7,4 +8,4 @@ import { IRouter } from './interface';
 
 export const privatePage: IRouter[] = [routerViewProfile];
 
-export const publicPage: IRouter[] = [routerHomepage,routerViewProfile,routerCharecter];
+export const publicPage: IRouter[] = [routerHomepage,routerViewProfile,routerCharecter,routerGuide];

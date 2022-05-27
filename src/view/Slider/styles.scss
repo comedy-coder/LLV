@@ -1,0 +1,91 @@
+@import "../styles/mixin" ;
+
+
+.hero-slider{
+    height: 100vh;
+    width: 100vw;
+    max-height: 1080px;
+    overflow: hidden;
+    position: relative;
+    &__button1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        @include respond(smallest-screen){
+            top:8px;
+        }
+        @include respond(xxs-screen){
+            top:4px;
+        }
+    }
+    &__position{
+        position: absolute;
+        top:85%;
+      
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__chosen-group{
+        width: 200px;
+        height: 60px;
+        width: 100%;
+    z-index: 3;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    position: absolute ;
+    top:60%;
+    }
+    &__button{
+        width: 8px;
+        height: 14px;
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid #C2030B;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        border-radius: 50%;
+        z-index: 3;
+        margin: 0 auto;
+        color: white;
+        margin: 4px;
+&.active{
+    background-color: #C2030B;
+    outline: none;
+    border: 1px solid #C2030B;
+}
+}
+    
+    &__control {
+       display: flex;
+    align-items: center;
+    justify-content: center;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__item{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: visible;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
