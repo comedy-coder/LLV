@@ -13,7 +13,7 @@ const HeroSlider = ({ data, control }: HeroSliderProps) => {
   };
   const handleNext = () => {
     activeIndex > 2 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1);
-    activeIndex === 3 ? history.push('/') : setActiveIndex(activeIndex + 1);
+    activeIndex === 3 ? history.push('/choicepage') : setActiveIndex(activeIndex + 1);
   };
 
   const handleBack = () => {
@@ -70,10 +70,14 @@ const HeroSlider = ({ data, control }: HeroSliderProps) => {
 };
 
 const HeroSliderItem = ({ item, active }: HeroSliderItemProps) => {
+  console.log(item.desc);
   return (
     <div className={`hero-slider__item ${active ? 'active' : ''}`}>
       <img srcSet={`${item.bg} 2x`} alt="" />
-      <img srcSet={`${test} 2x`} alt="" />
+
+      <div className={`hero-slider__box ${active ? 'active' : ''}`}>
+        <p> {item.desc} </p>
+      </div>
     </div>
   );
 };

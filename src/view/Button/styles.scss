@@ -6,7 +6,9 @@
     transform: translate(-140px,40px);  
     min-width: 55px ;
     height: 46px;
-  
+    justify-content: center;
+    display: flex;
+    align-items: center;
     &__txt {
         line-height: 1.5rem;
     }
@@ -16,20 +18,26 @@
         color: #FF9138;
     }
     &.cl-orange {
-      
+        
         color: #FF7506;
     }
     &.sz-medium {
-            display: flex;
-            align-items: center;
-            padding: 4.5px 28px 12.5px 28px;
-            font-size: 16px;
+        
+        padding: 4.5px 28px 12.5px 28px;
+        font-size: 16px;
+        
+        transform: translate(0,40px); 
+    }
+    &.sz-large {
+        
+        margin-top: 10px;
+        padding: 0 28px 8px;
+            width: 170px;
             
             transform: translate(0,40px); 
     }
     &.sz-small {
-        display: flex;
-        align-items: center;
+       
             height: 48px;
             font-size: 16px;
             width: 115px;
@@ -38,5 +46,15 @@
             font-weight: 700;
             line-height: 21.82px;
     }
-    
+    &.sz-special{
+      
+        justify-content: center;
+        padding: 0px 11.3636px 3.24675px;
+        width: 107.14px;
+        border-radius: 6.61603px;
+ 
+        transform: translate(0,40px); 
+        height: 28.41px;
+        
+    }   
 }

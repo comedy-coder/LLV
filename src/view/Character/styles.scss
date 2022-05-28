@@ -32,7 +32,7 @@ margin-top:125px;
         margin-top: 100px;
 }
 @include respond(small-screen){
-        margin-top: -66px;
+        margin-top: 75px;
 }
 @include respond(smallest-screen){
         margin-top: 0px;

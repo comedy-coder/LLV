@@ -91,7 +91,13 @@
       @content
     }
   };
-
+  
+  // screen ≥ 576px
+  @if $breakpoint==smx-screen {
+    @media only screen and (min-width: 400px) {
+      @content
+    }
+  };
   // screen ≥ 576px
   @if $breakpoint==sm-screen {
     @media only screen and (min-width: 576px) {

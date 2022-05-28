@@ -12,7 +12,7 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <img srcSet={`${bgmain} 2x`} alt="" className="bg-image" />
-      <Button handleClick={handleNext} icon={text} size={'medium'} />
+      <Button handleClick={handleNext} icon={text} size={'special'} />
     </div>
   );
 };
