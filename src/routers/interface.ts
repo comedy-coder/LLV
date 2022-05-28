@@ -9,6 +9,7 @@ export type IRouter = {
   exact?: boolean;
   name?: string;
   masterLayout?: boolean;
+  llvLayout?: boolean;
   menu?: {
     icon?: ReactNode;
     hideInNavbar?: boolean;

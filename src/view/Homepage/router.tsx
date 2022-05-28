@@ -5,4 +5,5 @@ export const routerHomepage: IRouter = {
   loader: import('./index'),
   exact: true,
   name: 'homepage.name',
+  masterLayout: false,
 };

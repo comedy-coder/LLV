@@ -7,5 +7,42 @@
        
 }
 .main-component{
-    padding: 0
+    padding: 0;
+   
+}
+.main-navbottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+border-radius: 12px 12px 0px 0px;
+    
+    a {
+        flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 3px;
+background-color:#FFF9E1 ;
+padding: 4px 0px 0px;
+gap: 2px;
+
+height: 75px;
+        
+        &:nth-child(1){
+                border-top-left-radius: 12px;
+        }
+        &:nth-child(3){
+                border-top-right-radius: 12px;
+        }
+      
+    }
+}
+.main-item.active{
+    background-color: #FFD233;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+
 }

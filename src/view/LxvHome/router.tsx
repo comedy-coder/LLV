@@ -1,7 +1,7 @@
 import { IRouter } from '@routers/interface';
 
-export const routerGuide: IRouter = {
-  path: '/guide',
+export const routerLXV: IRouter = {
+  path: '/lxvhome',
   loader: import('./index'),
-  masterLayout: false,
+  exact: true,
 };
