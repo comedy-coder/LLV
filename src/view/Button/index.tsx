@@ -6,16 +6,21 @@ const Button: React.FC<ButtonProps | null> = ({
   backgroundColor,
   border,
   handleClick,
+  disabled,
   icon,
   color,
   size,
 }) => {
   const bg = backgroundColor ? 'bg-' + backgroundColor : 'bg-main';
+  const db = disabled ? 'db' : '';
   const bd = border ? 'bd-' + border : '';
   const cl = color ? 'cl-' + color : '';
   const sz = size ? 'sz-' + size : '';
   return (
-    <button className={`btn ${bg} ${bd} ${cl} ${sz}`} onClick={event => handleClick(event, 1)}>
+    <button
+      className={`btn ${bg} ${bd} ${cl} ${sz} ${db}`}
+      onClick={event => handleClick(event, 1)}
+    >
       {icon ? (
         <div>
           <img srcSet={`${icon} 2x `} alt="" />

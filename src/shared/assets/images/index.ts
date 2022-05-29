@@ -30,5 +30,7 @@ export const lixiic = require("./lixiic.png")
 export const gold = require("./gold.png")
 export const llcb = require("./llcb.png")
 export const lc = require("./lc.png")
+export const l1l = require("./l1l.png")
+export const l10l = require("./l10l.png")
 
 

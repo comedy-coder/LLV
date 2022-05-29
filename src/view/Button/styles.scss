@@ -73,4 +73,8 @@
         border-radius: 18px;
         transform: translate(0,40px); 
     }
+    &.db{
+        background: linear-gradient(180deg, #C2C2C2 0%, #969696 100%);
+        user-select: none;
+    }
 }

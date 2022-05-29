@@ -1,0 +1,47 @@
+@import "../styles/mixin";
+.main-llvshake{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__sll{
+        color: #BC000E !important;
+        font-weight: 700 !important;
+font-size: 18px !important;
+line-height: 23px !important;
+    }
+    &.bg-1{
+        background-image: url(../../shared/assets/images/bg-llv1.png);
+    }
+    &.bg-2{
+        background-image: url(../../shared/assets/images/bg-llv2.png);
+    }
+    &.bg-3{
+        background-image: url(../../shared/assets/images/bg-llv3.png);
+    }
+    &.bg-4{
+        background-image: url(../../shared/assets/images/bg-llv4.png);
+    }
+    &__buttongroup{
+        span{
+            font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+transform: translateY(45px);
+
+
+color: #333333;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 136%;
+        @include respond(smallest-screen){
+            margin-top: 108%;
+        }
+    }
+}
