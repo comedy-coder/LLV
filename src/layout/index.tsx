@@ -9,24 +9,24 @@ const BottomNav = [
   {
     icon: llv,
     img: phoneic,
-    path: '/llvhome',
+    path: ['/llvhome', '/llvshake'],
   },
   {
     icon: lxv,
     img: lixiic,
-    path: '/lxvhome',
+    path: ['/lxvhome'],
   },
   {
     icon: kl,
     img: gold,
-    path: '/klhome',
+    path: ['/klhome'],
   },
 ];
 
 const DefaultLayout: React.FC<PropsWithChildren<IDefaultLayoutProps>> = props => {
   const { pathname } = useLocation();
-  const activeNav = BottomNav.findIndex(e => e.path === pathname);
-
+  const activeNav = BottomNav.findIndex(e => e.path.some(path => path === pathname));
+  console.log(BottomNav.findIndex(e => e.path.some(path => path === pathname)));
   return (
     <div className="all-page-component">
       <div className="main-component">{props.children}</div>
@@ -34,7 +34,7 @@ const DefaultLayout: React.FC<PropsWithChildren<IDefaultLayoutProps>> = props =>
         {BottomNav.map((item, index) => (
           <Link
             key={index}
-            to={item.path}
+            to={item.path[0]}
             className={`main-item ${activeNav === index ? 'active' : ''}`}
           >
             <img srcSet={`${item.img} 2x`} alt="" />

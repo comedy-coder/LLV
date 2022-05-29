@@ -1,4 +1,4 @@
-
+@import "../styles/mixin" ;
 .btn {
     background: linear-gradient(180deg, #FFF613 0%, #F37500 100%);
     box-shadow: 0px 0.398329px 1.19499px rgba(0, 0, 0, 0.3);
@@ -9,8 +9,16 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    @include respond(smallest-screen)
+    {
+        transform: translate(-120px,40px);   
+    }
     &__txt {
-        line-height: 1.5rem;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
+
     }
     
     &.bd-red {
@@ -45,6 +53,8 @@
             font-size: 16px;
             font-weight: 700;
             line-height: 21.82px;
+           
+
     }
     &.sz-special{
       
@@ -57,4 +67,10 @@
         height: 28.41px;
         
     }   
+    &.sz-xm{
+        width: 180px;
+        height: 62px;
+        border-radius: 18px;
+        transform: translate(0,40px); 
+    }
 }

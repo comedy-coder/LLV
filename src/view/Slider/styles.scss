@@ -34,12 +34,7 @@ color: #C2030B;
         position: absolute;
         top: 20px;
         width: 100%;
-        @include respond(smallest-screen){
-            top:8px;
-        }
-        @include respond(small-screen){
-            left:25px;
-        }
+        
     }
     &__position{
         position: absolute;

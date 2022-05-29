@@ -8,7 +8,9 @@ import { routerViewProfile } from '@view/Auth/Profile/router';
 import { routerHomepage } from '@view/Homepage/router';
 import  { routerCharecter } from '@view/Character/router';
 import { IRouter } from './interface';
+import { routerLLVShake } from '@view/LlvShake/router';
+
 
 export const privatePage: IRouter[] = [routerViewProfile];
 
-export const publicPage: IRouter[] = [routerHomepage, routerViewProfile, routerCharecter, routerGuide, routerChoice, routerLLV, routerLXV];
+export const publicPage: IRouter[] = [routerHomepage, routerViewProfile, routerCharecter, routerGuide, routerChoice, routerLLV, routerLXV,routerLLVShake];

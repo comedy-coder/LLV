@@ -70,7 +70,6 @@ const HeroSlider = ({ data, control }: HeroSliderProps) => {
 };
 
 const HeroSliderItem = ({ item, active }: HeroSliderItemProps) => {
-  console.log(item.desc);
   return (
     <div className={`hero-slider__item ${active ? 'active' : ''}`}>
       <img srcSet={`${item.bg} 2x`} alt="" />

@@ -8,13 +8,16 @@ const ChoicePage = () => {
   const handleBack = () => {
     history.push('/');
   };
+  const handleNext = () => {
+    history.push('/llvhome');
+  };
   return (
     <div className="main-choicepage">
       <div className="main-choicepage__position">
         <Button handleClick={handleBack} icon={arrow} />
       </div>
       <div className="main-choicepage__group">
-        <Button size="large" handleClick={handleBack} icon={llv} />
+        <Button size="large" handleClick={handleNext} icon={llv} />
         <Button size="large" handleClick={handleBack} icon={lxv} />
       </div>
     </div>

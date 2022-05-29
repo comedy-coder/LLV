@@ -28,4 +28,7 @@ export const kl = require("./kl.png")
 export const phoneic = require("./phoneic.png")
 export const lixiic = require("./lixiic.png")
 export const gold = require("./gold.png")
+export const llcb = require("./llcb.png")
+export const lc = require("./lc.png")
+
 

@@ -16,8 +16,14 @@ const Button: React.FC<ButtonProps | null> = ({
   const sz = size ? 'sz-' + size : '';
   return (
     <button className={`btn ${bg} ${bd} ${cl} ${sz}`} onClick={event => handleClick(event, 1)}>
-      {icon ? <img srcSet={`${icon} 2x `} alt="" /> : ''}
-      <span className="btn__txt">{children}</span>
+      {icon ? (
+        <div>
+          <img srcSet={`${icon} 2x `} alt="" />
+        </div>
+      ) : (
+        ''
+      )}
+      <div className="btn__txt">{children}</div>
     </button>
   );
 };
