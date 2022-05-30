@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    
     @include respond(smallest-screen)
     {
         transform: translate(-120px,40px);   
@@ -35,6 +36,10 @@
         font-size: 16px;
         
         transform: translate(0,40px); 
+        @include respond(small-screen)
+        {
+            transform: translate(0,30px); 
+        }
     }
     &.sz-large {
         
@@ -65,6 +70,16 @@
  
         transform: translate(0,40px); 
         height: 28.41px;
+        @include respond(small-screen)
+        {
+        transform: translate(0,50px); 
+            
+        }
+        @include respond(smallest-screen)
+        {
+        transform: translate(0,58px); 
+            
+        }
         
     }   
     &.sz-xm{
@@ -72,6 +87,15 @@
         height: 62px;
         border-radius: 18px;
         transform: translate(0,40px); 
+    }
+    &.sz-sxm{
+        width: 201px;
+        height: 44px;
+        border-radius: 18px;
+        transform: translate(0,40px); 
+        @include respond(smx-screen) {
+            transform: translate(0,88px); 
+        }
     }
     &.db{
         background: linear-gradient(180deg, #C2C2C2 0%, #969696 100%);

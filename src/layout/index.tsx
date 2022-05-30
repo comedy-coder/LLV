@@ -9,7 +9,7 @@ const BottomNav = [
   {
     icon: llv,
     img: phoneic,
-    path: ['/llvhome', '/llvshake'],
+    path: ['/llvhome', '/llvshake', '/llvllct'],
   },
   {
     icon: lxv,

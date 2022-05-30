@@ -1,0 +1,40 @@
+@import "../styles/mixin";
+.main-klhome {
+    background-image: url(../../shared/assets/images/bg-kl.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+   
+    align-items: center;
+    flex-direction: column;
+    &__header{
+        width: 335px;
+height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+background: #FFF9E1;
+border-radius: 8px;
+            &__item{
+                width: 108px;
+                height: 40px;
+                font-weight: 800;
+font-size: 14px;
+                    border-radius: 5px;
+color: #C2030B;
+text-align: center;
+border:none;
+outline: none;
+background-color: transparent;
+                &.active {
+                    color: white;
+                    background-color: #C2030B;
+                }
+
+            }
+    }
+   
+}

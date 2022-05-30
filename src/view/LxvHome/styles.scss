@@ -1,0 +1,41 @@
+@import "../styles/mixin";
+.main-lxvhome {
+    background-image: url(../../shared/assets/images/bg-lxv.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+   
+    align-items: center;
+    flex-direction: column;
+    
+    &__buttongroup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 118%;
+        font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+
+color: #FFFFFF;
+        &__title{
+            transform: translateY(30px);
+
+        }
+        span{
+            color: yellow;
+            font-size: 24px;
+        }
+        @include respond(smallest-screen){
+            margin-top: 103%;
+        }
+        // @include respond(small-screen){
+        //     margin-top: 113%;
+        // }
+    }
+}

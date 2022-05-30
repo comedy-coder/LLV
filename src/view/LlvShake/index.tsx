@@ -14,12 +14,14 @@ const LLVShake = () => {
   };
   const handlel1l = () => {
     if (state.pushremaining > 0) dispatch(pushedButton(state.pushremaining - 1));
-    else if (state.pushremaining === 0) dispatch(pushedButton((state.pushremaining = 11)));
+    else if (state.pushremaining === 0)
+      dispatch(pushedButton((state.pushremaining = Math.floor(Math.random() * 100))));
   };
   const handlel10l = (e: any) => {
-    if (state.pushremaining > 0) dispatch(pushedButton(state.pushremaining - 10));
-    else if (state.pushremaining === 0) dispatch(pushedButton((state.pushremaining = 11)));
-    else dispatch(pushedButton(state));
+    if (state.pushremaining > 10) dispatch(pushedButton(state.pushremaining - 10));
+    else if (state.pushremaining < 0)
+      dispatch(pushedButton((state.pushremaining = Math.floor(Math.random() * 100))));
+    else if (state.pushremaining === 10) dispatch(pushedButton(state.pushremaining - 10));
   };
   return (
     <div

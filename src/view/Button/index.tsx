@@ -10,16 +10,19 @@ const Button: React.FC<ButtonProps | null> = ({
   icon,
   color,
   size,
+  top,
 }) => {
   const bg = backgroundColor ? 'bg-' + backgroundColor : 'bg-main';
   const db = disabled ? 'db' : '';
   const bd = border ? 'bd-' + border : '';
   const cl = color ? 'cl-' + color : '';
   const sz = size ? 'sz-' + size : '';
+
   return (
     <button
-      className={`btn ${bg} ${bd} ${cl} ${sz} ${db}`}
+      className={`btn ${bg} ${bd} ${cl} ${sz} ${db} `}
       onClick={event => handleClick(event, 1)}
+      style={{ marginTop: top }}
     >
       {icon ? (
         <div>

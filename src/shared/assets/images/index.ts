@@ -32,5 +32,13 @@ export const llcb = require("./llcb.png")
 export const lc = require("./lc.png")
 export const l1l = require("./l1l.png")
 export const l10l = require("./l10l.png")
+export const blxic = require("./blxic.png")
+export const dct = require("./dct.png")
+export const popupsk = require("./popup-sk.png")
+export const popupxn = require("./popup-xn.png")
+export const tvk = require("./tvk.png")
+export const xn = require("./xn.png")
+export const tlx = require("./tlx.png")
+export const dlx = require("./dlx.png")
 
 

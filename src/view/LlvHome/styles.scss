@@ -10,6 +10,7 @@
    
     align-items: center;
     flex-direction: column;
+    
     &__buttongroup{
         display: flex;
         align-items: center;
@@ -17,7 +18,38 @@
         flex-direction: column;
         margin-top: 118%;
         @include respond(smallest-screen){
-            margin-top: 108%;
+            margin-top: 103%;
         }
+        // @include respond(small-screen){
+        //     margin-top: 113%;
+        // }
     }
+}
+.ant-modal-footer{
+    display: none;
+}
+.ant-modal-close{
+    display: none;
+}
+.ant-modal-content{
+    background-color: transparent;
+    padding :0;
+    height: 100%;
+ 
+}
+.ant-modal-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    
+}
+.button-position{
+    position: absolute;
+    top :43%;
+}
+.button-position1{
+    position: absolute;
+    top :45%;
 }

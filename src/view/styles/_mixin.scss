@@ -87,7 +87,7 @@
     }
   };
   @if $breakpoint==smallest-screen {
-    @media only screen and (max-width: 361px) {
+    @media only screen and (max-width: 375px) {
       @content
     }
   };

@@ -1,32 +1,68 @@
 import Button from '@view/Button';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './styles.scss';
-import { arrow, lc, llcb, llv } from '@assets/images';
+import { arrow, lc, llcb, llv, popupsk, popupxn, tvk, xn } from '@assets/images';
 import { Context } from 'src/store/provider';
 
 import { useHistory } from 'react-router';
+import { Modal } from 'antd';
+import { stringify } from 'querystring';
+import { pushedButton } from 'src/store/action';
 
 const LlvHome = () => {
   const history = useHistory();
-
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [state, dispatch] = useContext(Context);
+  const [isLogIn, setisLogin] = useState(true);
+
+  useEffect(() => {
+    let count = JSON.parse(localStorage.getItem('count'));
+    if (count < 2) {
+      setIsModalVisible(true);
+      localStorage.setItem('count', '3');
+    } else setIsModalVisible(false);
+  }, []);
   const handleBack = () => {
     history.push('./choicepage');
-    // if (state.pushremaining > 0) dispatch(pushedButton(state.pushremaining - 1));
-    // else if (state.pushremaining === 0) dispatch(pushedButton((state.pushremaining = 11)));
   };
-  const handleNext = () => {
+  const handleLLV = () => {
     history.push('./llvshake');
   };
-  const hanldeLLCB = () => {};
+  const handleNext = () => {
+    history.push('./llvllct');
+  };
+  const hanldeLLCB = () => {
+    history.push('./guide');
+  };
+  const hanldeCloseModal = () => {
+    setIsModalVisible(false);
+    dispatch(pushedButton(state.pushremaining + 1));
+  };
   return (
     <div className="main-llvhome">
-      <Button icon={arrow} handleClick={handleBack} />
+      <Modal visible={isModalVisible}>
+        {isLogIn ? (
+          <>
+            <div className="button-position">
+              <Button icon={tvk} size={'large'} handleClick={() => setisLogin(false)} />
+            </div>
+            <img srcSet={`${popupsk} 2x`} alt="" />
+          </>
+        ) : (
+          <>
+            <div className="button-position1">
+              <Button icon={xn} size={'large'} handleClick={hanldeCloseModal} />
+            </div>
+            <img srcSet={`${popupxn} 2x`} alt="" />
+          </>
+        )}
+      </Modal>
+      <Button icon={arrow} handleClick={handleBack} top="25px" />
       <div className="main-llvhome__buttongroup">
-        <Button icon={llv} size={'xm'} handleClick={handleNext}>
+        <Button icon={llv} size={'xm'} handleClick={handleLLV}>
           còn {state.pushremaining} lượt
         </Button>
-        <Button icon={llcb} size={'large'} handleClick={hanldeLLCB} />
+        <Button icon={llcb} size={'large'} handleClick={handleNext} />
         <Button icon={lc} size={'large'} handleClick={hanldeLLCB} />
       </div>
     </div>

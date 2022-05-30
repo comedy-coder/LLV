@@ -1,7 +1,7 @@
 import {LLV_PUSHED} from "./action"
 
 export const initState = {
-    pushremaining : 11,
+    pushremaining : Math.floor(Math.random() *100)
     
 }
 const reducer = (state :any, action :any ) => {

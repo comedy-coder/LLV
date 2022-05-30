@@ -55,11 +55,9 @@ color: #C2030B;
     justify-content: center;
     position: absolute ;
     top:60%;
-    @include respond(smallest-screen){
-        top:8px;
-    }
+   
     @include respond(small-screen){
-        top:64%;
+        top:62%;
     }
     }
     &__button{
