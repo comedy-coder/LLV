@@ -14,7 +14,7 @@ const BottomNav = [
   {
     icon: lxv,
     img: lixiic,
-    path: ['/lxvhome'],
+    path: ['/lxvhome', '/lixi'],
   },
   {
     icon: kl,

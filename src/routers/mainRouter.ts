@@ -11,8 +11,9 @@ import  { routerCharecter } from '@view/Character/router';
 import { IRouter } from './interface';
 import { routerLLVShake } from '@view/LlvShake/router';
 import { routerLLVLLCt } from '@view/Llct/router';
+import { routerLIXI } from '@view/Lixi/router';
 
 
 export const privatePage: IRouter[] = [routerViewProfile];
 
-export const publicPage: IRouter[] = [routerHomepage, routerViewProfile, routerCharecter, routerGuide, routerChoice, routerLLV, routerLXV,routerLLVShake,routerLLVLLCt,routerKL];
+export const publicPage: IRouter[] = [routerHomepage, routerViewProfile, routerCharecter, routerGuide, routerChoice, routerLLV, routerLXV,routerLLVShake,routerLLVLLCt,routerKL,routerLIXI];

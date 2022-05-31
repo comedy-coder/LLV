@@ -14,11 +14,9 @@ const LXVhome = () => {
   const handleBack = () => {
     history.push('./choicepage');
   };
-  const handleLLV = () => {
-    history.push('./llvshake');
-  };
+
   const handleNext = () => {
-    history.push('./llvllct');
+    history.push('./lixi');
   };
   const hanldeLLCB = () => {
     history.push('./guide');

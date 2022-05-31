@@ -1,0 +1,39 @@
+@import "../styles/mixin";
+.main-lixi{
+    background-image: url(../../shared/assets/images/bg-lixi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    &__buttongroup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 80%;
+        font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+font-weight: 600;
+
+color: #333333;
+        &__title{
+            transform: translateY(30px);
+
+        }
+        span{
+            color: red;
+            font-size: 24px;
+        }
+        @include respond(smallest-screen){
+            margin-top: 103%;
+        }
+        // @include respond(small-screen){
+        //     margin-top: 113%;
+        // }
+    }
+}

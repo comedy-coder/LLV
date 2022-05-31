@@ -97,6 +97,28 @@
             transform: translate(0,88px); 
         }
     }
+    &.sz-sxmm{
+        width: 245px;
+        height: 44px;
+        margin-top:10px;
+        border-radius: 18px;
+        transform: translate(0,40px); 
+        color: red;
+        @include respond(smx-screen) {
+            transform: translate(0,88px); 
+        }
+    }
+    &.sz-sxmm1{
+        width: 245px;
+        height: 62px;
+        margin-top: 10px;
+        border-radius: 18px;
+        transform: translate(0,40px); 
+        color: red;
+        @include respond(smx-screen) {
+            transform: translate(0,88px);   
+        }
+    }
     &.db{
         background: linear-gradient(180deg, #C2C2C2 0%, #969696 100%);
         user-select: none;

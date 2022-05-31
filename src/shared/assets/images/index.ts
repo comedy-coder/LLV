@@ -53,5 +53,10 @@ export const qua3 = require("./qua3.png")
 export const qua4 = require("./qua4.png")
 export const qua5 = require("./qua5.png")
 export const qua6 = require("./qua6.png")
+export const dntlx = require("./dntlx.png")
+export const ttlx = require("./ttlx.png")
+export const dhtt = require("./dhtt.png")
+export const luatchoi = require("./luatchoi.png")
+export const bxh = require("./bxh.png")
 
 
