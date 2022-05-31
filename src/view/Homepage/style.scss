@@ -1,3 +1,5 @@
+
+@import "../styles/mixin";
 .homepage{
     width: calc(100% - 32px);
     height: 100%;
@@ -9,8 +11,30 @@ margin-left: 16px;
 
 
 }
-.bg-image{
-position: absolute;
-top :39%;
-
+@include respond(smx-screen){
+    .bg-image{
+        position: absolute;
+        top :39%;
+        
+        }
+}
+@include respond(xxs-screen){
+    .bg-image{
+        position: absolute;
+        top :39%;
+        
+        }
+}
+@include respond(smallest-screen){
+    .bg-image{
+        position: absolute;
+        top :39%;
+        
+        }
+@include respond(xmax-screen){
+    .bg-image{
+        position: absolute;
+        top :38%;
+        
+        }}
 }

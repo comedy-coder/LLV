@@ -82,12 +82,22 @@
     }
   };
   @if $breakpoint==small-screen {
-    @media only screen and (max-width: 376px) {
+    @media only screen and (min-width: 376px) {
+      @content
+    }
+  };
+  @if $breakpoint==x-screen {
+    @media only screen and (min-width: 361px) {
+      @content
+    }
+  };
+  @if $breakpoint==xmax-screen {
+    @media only screen and (max-width: 380px) {
       @content
     }
   };
   @if $breakpoint==smallest-screen {
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 361px) {
       @content
     }
   };

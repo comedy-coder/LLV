@@ -1,0 +1,24 @@
+.main-luckynumber{
+    &__header{
+        height: 49px;
+        background: #FFEBB9;
+border-radius: 7px;
+border : 2px solid #FFF613;
+        &__item{
+            height: 49px;
+            background: #FFEBB9;
+            color: #C4040B;
+            width: 50%;
+            outline: none;
+            border: none;
+            font-weight: 700;
+             font-size: 14px;
+            line-height: 18px;
+            &.active{
+                background-color: #C1030C;
+                color: white;
+                border-radius: 7px;
+            }
+        }
+    }
+}

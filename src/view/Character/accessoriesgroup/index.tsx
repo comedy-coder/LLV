@@ -3,7 +3,6 @@ import { accesories } from './interface';
 import './styles.scss';
 
 const Accessories = ({ item, index, img1, img2 }: accesories) => {
-  console.log(img1);
   return (
     <>
       <button className={`item1 ${index === 3 ? 'yellow' : ''}`}>{item[0]}</button>
