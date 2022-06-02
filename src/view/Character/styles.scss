@@ -15,6 +15,10 @@
         position: absolute;
         top: 33%;
         right: 7%;
+        @include respond(x-screen){
+            top:40%;
+            right: 9%;
+        }
     }
     &__chosen-group{
         width: 335px;
@@ -27,16 +31,14 @@ justify-content: center;
 background-color: #86120B;
 box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
-margin-top:125px;
+margin-top:40px;
+@include respond(small-screen){
+        margin-top: 72px;
+}
 @include respond(xxs-screen){
-        margin-top: 100px;
+        margin-top: 110px;
 }
-@include respond(xmax-screen){
-        margin-top: 70px;
-}
-@include respond(smallest-screen){
-        margin-top: 0px;
-}
+
 
     }
     &__button{

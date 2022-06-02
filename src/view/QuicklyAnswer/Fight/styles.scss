@@ -1,0 +1,52 @@
+@import "../../styles/mixin";
+.main-fight {
+    background-image: url(../../../shared/assets/images/bg-fight.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+   
+    align-items: center;
+    flex-direction: column;
+    &__group{
+        height: 200px;
+        width: 100%;
+        margin-top: 75%;
+        @include respond(small-screen){
+            margin-top: 78%;
+        }
+    }
+    &__answer {
+    background-image: url(../../../shared/assets/images/answer.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 44px;
+    display: flex ;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #C2030B;
+    &.incorrect {
+        background-image: url(../../../shared/assets/images/wrong.png);
+        color: white;
+    }
+    &.correct {
+        color: white;
+        background-image: url(../../../shared/assets/images/right.png);
+    }
+    &:focus {
+        outline: none;
+    }
+
+    }
+}

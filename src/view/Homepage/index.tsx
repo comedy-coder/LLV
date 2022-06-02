@@ -4,6 +4,7 @@ import React from 'react';
 import Button from '../Button';
 import { useHistory } from 'react-router';
 import { useAltaIntl } from '@shared/hook/useTranslate';
+import AnimatedPage from '@view/AnimatedRouter/AnimatedPage';
 const Homepage = () => {
   localStorage.setItem('count', '1');
   const history = useHistory();
@@ -12,10 +13,12 @@ const Homepage = () => {
   };
   const { formatMessage } = useAltaIntl();
   return (
-    <div className="homepage">
-      <img srcSet={`${bgmain} 2x`} alt="" className="bg-image" />
-      <Button handleClick={handleNext} icon={text} size={'special'} />
-    </div>
+    <AnimatedPage>
+      <div className="homepage">
+        <img srcSet={`${bgmain} 2x`} alt="" className="bg-image" />
+        <Button handleClick={handleNext} icon={text} size={'special'} />
+      </div>
+    </AnimatedPage>
   );
 };
 

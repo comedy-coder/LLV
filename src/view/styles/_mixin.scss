@@ -77,37 +77,25 @@
     }
   };
   @if $breakpoint==xxs-screen {
-    @media only screen and (max-width: 400px) {
-      @content
-    }
-  };
-  @if $breakpoint==small-screen {
-    @media only screen and (min-width: 376px) {
-      @content
-    }
-  };
-  @if $breakpoint==x-screen {
-    @media only screen and (min-width: 361px) {
-      @content
-    }
-  };
-  @if $breakpoint==xmax-screen {
-    @media only screen and (max-width: 380px) {
-      @content
-    }
-  };
-  @if $breakpoint==smallest-screen {
-    @media only screen and (max-width: 361px) {
-      @content
-    }
-  };
-  
-  // screen ≥ 576px
-  @if $breakpoint==smx-screen {
     @media only screen and (min-width: 400px) {
       @content
     }
   };
+  @if $breakpoint==small-screen {
+    @media only screen and (min-width: 375px) {
+      @content
+    }
+  };
+  @if $breakpoint==x-screen {
+    @media only screen and (min-width: 360px) {
+      @content
+    }
+  };
+ 
+  
+  
+  
+  
   // screen ≥ 576px
   @if $breakpoint==sm-screen {
     @media only screen and (min-width: 576px) {

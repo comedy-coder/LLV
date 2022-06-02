@@ -9,7 +9,10 @@ const Lixi = () => {
   const [state, dispatch] = useContext(Context);
   const history = useHistory();
   const handleBack = () => {
-    history.push('/lixi');
+    history.push('/lxvhome');
+  };
+  const handleQuicklyAnswer = () => {
+    history.push('/quicklyanswer');
   };
   return (
     <div className="main-lixi">
@@ -18,12 +21,12 @@ const Lixi = () => {
         <div className="main-lixi__buttongroup__title">
           Bạn đang có <span>{state.pushremaining}</span> lì xì
         </div>
-        <Button icon={dntlx} size={'sxmm'} handleClick={handleBack} />
+        <Button icon={dntlx} size={'sxmm'} handleClick={handleQuicklyAnswer} />
         <Button icon={ttlx} size={'sxmm1'} handleClick={handleBack}>
           12:00-13:00 | 18:00 - 20:00
         </Button>
-        <Button icon={luatchoi} size={'sxmm'} handleClick={handleBack} />
-        <Button icon={bxh} size={'sxmm'} handleClick={handleBack} />
+        <Button icon={luatchoi} primary size={'sxmm'} handleClick={handleBack} />
+        <Button icon={bxh} size={'sxmm'} primary handleClick={handleBack} />
         <Button icon={dhtt} size={'sxmm1'} handleClick={handleBack}>
           12:00-13:00 | 18:00 - 20:00
         </Button>

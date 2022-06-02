@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 import { arrow } from '@assets/images';
 import { HeroSliderProps, HeroSliderItemProps } from './interface';
 import './styles.scss';
+import AnimatedPage from '@view/AnimatedRouter/AnimatedPage';
 const HeroSlider = ({ data, control }: HeroSliderProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const history = useHistory();
@@ -36,36 +37,38 @@ const HeroSlider = ({ data, control }: HeroSliderProps) => {
   ];
 
   return (
-    <div className="hero-slider">
-      <div className="hero-slider__button1">
-        <Button icon={arrow} handleClick={handleBack} />
-      </div>
-      <span className="hero-slider__title">Hướng dẫn</span>
-      {data.map((item, index) => (
-        <HeroSliderItem key={index} active={index === activeIndex} item={item} />
-      ))}
-
-      {control ? (
-        <div className="hero-slider__chosen-group">
-          {Chosen.map((item, index) => (
-            <button
-              key={index}
-              className={`hero-slider__button ${item.value === activeIndex ? 'active' : ''}`}
-              onClick={e => {
-                handleChosen(index);
-              }}
-            ></button>
-          ))}
+    <AnimatedPage>
+      <div className="hero-slider">
+        <div className="hero-slider__button1">
+          <Button icon={arrow} handleClick={handleBack} />
         </div>
-      ) : null}
-      <div className="hero-slider__position">
-        <Button
-          icon={activeIndex === 3 ? playnow : next}
-          handleClick={handleNext}
-          size={'medium'}
-        />
+        <span className="hero-slider__title">Hướng dẫn</span>
+        {data.map((item, index) => (
+          <HeroSliderItem key={index} active={index === activeIndex} item={item} />
+        ))}
+
+        {control ? (
+          <div className="hero-slider__chosen-group">
+            {Chosen.map((item, index) => (
+              <button
+                key={index}
+                className={`hero-slider__button ${item.value === activeIndex ? 'active' : ''}`}
+                onClick={e => {
+                  handleChosen(index);
+                }}
+              ></button>
+            ))}
+          </div>
+        ) : null}
+        <div className="hero-slider__position">
+          <Button
+            icon={activeIndex === 3 ? playnow : next}
+            handleClick={handleNext}
+            size={'medium'}
+          />
+        </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 };
 

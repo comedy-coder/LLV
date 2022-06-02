@@ -7,4 +7,7 @@ export type ButtonProps = {
   icon?: string;
   color?: string;
   size?: string;
+  disabled?: boolean;
+  top?: string;
+  primary?: boolean;
 };

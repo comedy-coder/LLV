@@ -8,33 +8,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-left: 16px;
-
-
-}
-@include respond(smx-screen){
-    .bg-image{
-        position: absolute;
-        top :39%;
-        
-        }
-}
-@include respond(xxs-screen){
-    .bg-image{
-        position: absolute;
-        top :39%;
-        
-        }
-}
-@include respond(smallest-screen){
-    .bg-image{
-        position: absolute;
-        top :39%;
-        
-        }
-@include respond(xmax-screen){
-    .bg-image{
-        position: absolute;
-        top :38%;
-        
-        }}
-}
+.bg-image{
+    position: absolute;
+    top:39%;
+}}
+ 

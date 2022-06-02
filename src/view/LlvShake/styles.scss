@@ -7,28 +7,46 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     &__sll{
         color: #BC000E !important;
         font-weight: 700 !important;
-font-size: 18px !important;
-line-height: 23px !important;
+        font-size: 18px !important;
+        line-height: 23px !important;
     }
     &.bg-1{
         background-image: url(../../shared/assets/images/bg-llv1.png);
+    
+        transition: opacity 1s ease-in-out;
+        &.active {
+            opacity: 1
+        }
     }
     &.bg-2{
+        &.active {
+            opacity: 1
+        }
+        
         background-image: url(../../shared/assets/images/bg-llv2.png);
     }
-    &.bg-3{
+    &.bg-3{  
+        &.active {
+            opacity: 1
+        }
+        
         background-image: url(../../shared/assets/images/bg-llv3.png);
     }
-    &.bg-4{
+    &.bg-4{  
+        &.active {
+            opacity: 1
+        }
         background-image: url(../../shared/assets/images/bg-llv4.png);
     }
     &__buttongroup{
         span{
             font-weight: 700;
-font-size: 16px;
+            font-size: 16px;
 line-height: 19px;
 transform: translateY(45px);
 
@@ -39,20 +57,15 @@ color: #333333;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 136%;
-        @include respond(smallest-screen){
-            margin-top: 108%;
+    
+        @include respond(x-screen){
+            margin-top: 122%;
         }
-    }
-    &__body{
-        &__item{
-            width: 335px;
-height: 94px;
-
-
-
-background: #FFFAE9;
-border-radius: 8px;
+        @include respond(small-screen){
+            margin-top: 133%;
+        }
+        @include respond(xxs-screen){
+            margin-top: 141%;
         }
     }
 }

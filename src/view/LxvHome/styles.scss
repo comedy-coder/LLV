@@ -16,13 +16,15 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 118%;
+        margin-top: 105%;
         font-weight: 400;
-font-size: 16px;
-line-height: 19px;
+        font-size: 16px;
+        line-height: 19px;
+        @include respond(small-screen){
+            margin-top: 118%;
+        }
 
-
-color: #FFFFFF;
+        color: #FFFFFF;
         &__title{
             transform: translateY(30px);
 

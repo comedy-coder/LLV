@@ -2,6 +2,7 @@ import HeroSlider from '@view/Slider';
 import React from 'react';
 import { slide1, slide2, slide3, slide4 } from '@assets/images';
 import './styles.scss';
+import AnimatedPage from '@view/AnimatedRouter/AnimatedPage';
 
 const Guide = () => {
   const dataSlider = [
@@ -23,9 +24,11 @@ const Guide = () => {
     },
   ];
   return (
-    <div className="main-guide">
-      <HeroSlider data={dataSlider} control={true} />
-    </div>
+    <AnimatedPage>
+      <div className="main-guide">
+        <HeroSlider data={dataSlider} control={true} />
+      </div>
+    </AnimatedPage>
   );
 };
 

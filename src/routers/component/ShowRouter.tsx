@@ -20,6 +20,7 @@ const renderRoute = (
   if (hasMaster === false) {
     return <Route key={path} path={path} exact={exact} component={component} />;
   }
+
   const DynamicComponent: React.FC<any> = component;
   if (MasterLayout) {
     return (

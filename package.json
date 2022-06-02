@@ -133,6 +133,7 @@
     "browserslist": "^4.7.0",
     "dotenv": "^16.0.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "framer-motion": "^4.1.17",
     "js-file-download": "^0.4.12",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",

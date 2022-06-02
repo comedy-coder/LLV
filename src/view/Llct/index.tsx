@@ -35,7 +35,7 @@ const LLCt = () => {
   ];
   return (
     <div className="main-llct">
-      <Button icon={arrow} handleClick={handleBack} top="30px" />
+      <Button icon={arrow} handleClick={handleBack} top="26px" />
       <div className="main-llct__header">
         <div className="main-llct__header__number">
           <span className="main-llct__header__number1"> Số lượt lắc của bạn là :</span>{' '}

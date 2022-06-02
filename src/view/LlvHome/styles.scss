@@ -17,12 +17,15 @@
         justify-content: center;
         flex-direction: column;
         margin-top: 118%;
-        @include respond(smallest-screen){
-            margin-top: 103%;
+        @include respond(x-screen){
+            margin-top: 102%;
         }
-        // @include respond(small-screen){
-        //     margin-top: 113%;
-        // }
+        @include respond(small-screen){
+            margin-top: 113%;
+        }
+        @include respond(xxs-screen){
+            margin-top: 118%;
+        }
     }
 }
 .ant-modal-footer{

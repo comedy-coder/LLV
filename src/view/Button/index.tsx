@@ -11,16 +11,17 @@ const Button: React.FC<ButtonProps | null> = ({
   color,
   size,
   top,
+  primary,
 }) => {
   const bg = backgroundColor ? 'bg-' + backgroundColor : 'bg-main';
   const db = disabled ? 'db' : '';
   const bd = border ? 'bd-' + border : '';
   const cl = color ? 'cl-' + color : '';
   const sz = size ? 'sz-' + size : '';
-
+  const pm = primary ? 'pm' : '';
   return (
     <button
-      className={`btn ${bg} ${bd} ${cl} ${sz} ${db} `}
+      className={`btn ${bg} ${bd} ${cl} ${sz} ${db} ${pm}`}
       onClick={event => handleClick(event, 1)}
       style={{ marginTop: top }}
     >

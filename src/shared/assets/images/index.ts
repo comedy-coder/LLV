@@ -58,5 +58,11 @@ export const ttlx = require("./ttlx.png")
 export const dhtt = require("./dhtt.png")
 export const luatchoi = require("./luatchoi.png")
 export const bxh = require("./bxh.png")
+export const tdt = require("./tdt.png")
+export const huy = require("./Huy.png")
+export const choi = require("./choi.png")
+export const chiase = require("./chiase.png")
+export const nhanloc = require("./nhanloc.png")
+
 
 

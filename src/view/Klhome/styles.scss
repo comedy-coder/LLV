@@ -12,17 +12,28 @@
     flex-direction: column;
     &__body{
         width: 335px;
-        height: 511px;
+        height: 450px;
         background: #FFF9E1;
         border-radius: 8px;
         position: relative;
-        margin-top: 20px;
+        margin-top: 12px;
+        @include respond(small-screen){
+            height: 500px;
+        }
+        @include respond(xxs-screen){
+            height: 565px;
+        }
+       
     }
     &__header{
-        margin-top: 85px;
-        @include respond(xmax-screen)
+        margin-top: 60px;
+        @include respond(small-screen)
         {
             margin-top: 75px;
+        }
+        @include respond(small-screen)
+        {
+            margin-top: 90px;
         }
         width: 335px;
 height: 52px;

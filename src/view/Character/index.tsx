@@ -17,6 +17,7 @@ import Accessories from './accessoriesgroup';
 import { rau1, rau2 } from '../../shared/assets/images';
 import './styles.scss';
 import Button from '@view/Button';
+import AnimatedPage from '@view/AnimatedRouter/AnimatedPage';
 const Charecter = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const Chosen = [
@@ -72,54 +73,56 @@ const Charecter = () => {
   };
 
   return (
-    <div className="main-charecter">
-      <div className="main-charecter__header">
-        <Button icon={arrow} handleClick={handleBack} />
+    <AnimatedPage>
+      <div className="main-charecter">
+        <div className="main-charecter__header">
+          <Button icon={arrow} handleClick={handleBack} />
 
-        <h3>TẠO NHÂN VẬT</h3>
-        <h2>LÊN ĐỒ LẮC LỘC NÀO ANH EM ƠI!</h2>
-        <span>Anh em đã sẵn sàng lắc lộc chưa,</span>
-        <span>lên đồ ngay nhé!</span>
-      </div>
-      <div className="main-charecter__body">
-        <img srcSet={`${bgbottom} 2x`} alt="" className="main-charecter__body__bgbt" />
-        <img srcSet={`${circle} 2x`} alt="" className="main-charecter__body__circle" />
-        <img srcSet={`${clound} 2x`} alt="" className="main-charecter__body__clound" />
-        <img srcSet={`${man} 2x`} alt="" className="main-charecter__body__man" />
-        <img srcSet={`${tree} 2x`} alt="" className="main-charecter__body__tree" />
-        <img srcSet={`${mai} 2x`} alt="" className="main-charecter__body__mai" />
-        <img srcSet={`${dao} 2x`} alt="" className="main-charecter__body__dao" />
-      </div>
-      <div className="main-charecter__chosen-group">
-        {Chosen.map((item, index) => (
-          <button
-            key={index}
-            className={`main-charecter__button ${item.value === activeIndex ? 'active' : ''}`}
-            onClick={e => {
-              handleChosen(index);
-            }}
-          >
-            {item.display}
-          </button>
-        ))}
-      </div>
-      <div className="main-charecter__accessoriesgroup">
-        {accessories.map((item, index) =>
-          activeIndex === item.value ? (
-            <Accessories
+          <h3>TẠO NHÂN VẬT</h3>
+          <h2>LÊN ĐỒ LẮC LỘC NÀO ANH EM ƠI!</h2>
+          <span>Anh em đã sẵn sàng lắc lộc chưa,</span>
+          <span>lên đồ ngay nhé!</span>
+        </div>
+        <div className="main-charecter__body">
+          <img srcSet={`${bgbottom} 2x`} alt="" className="main-charecter__body__bgbt" />
+          <img srcSet={`${circle} 2x`} alt="" className="main-charecter__body__circle" />
+          <img srcSet={`${clound} 2x`} alt="" className="main-charecter__body__clound" />
+          <img srcSet={`${man} 2x`} alt="" className="main-charecter__body__man" />
+          <img srcSet={`${tree} 2x`} alt="" className="main-charecter__body__tree" />
+          <img srcSet={`${mai} 2x`} alt="" className="main-charecter__body__mai" />
+          <img srcSet={`${dao} 2x`} alt="" className="main-charecter__body__dao" />
+        </div>
+        <div className="main-charecter__chosen-group">
+          {Chosen.map((item, index) => (
+            <button
               key={index}
-              item={item.display}
-              index={index}
-              img1={item.img1}
-              img2={item.img2}
-            />
-          ) : (
-            ''
-          ),
-        )}
+              className={`main-charecter__button ${item.value === activeIndex ? 'active' : ''}`}
+              onClick={e => {
+                handleChosen(index);
+              }}
+            >
+              {item.display}
+            </button>
+          ))}
+        </div>
+        <div className="main-charecter__accessoriesgroup">
+          {accessories.map((item, index) =>
+            activeIndex === item.value ? (
+              <Accessories
+                key={index}
+                item={item.display}
+                index={index}
+                img1={item.img1}
+                img2={item.img2}
+              />
+            ) : (
+              ''
+            ),
+          )}
+        </div>
+        <Button handleClick={handleNext} icon={Text1} size={'medium'} />
       </div>
-      <Button handleClick={handleNext} icon={Text1} size={'medium'} />
-    </div>
+    </AnimatedPage>
   );
 };
 

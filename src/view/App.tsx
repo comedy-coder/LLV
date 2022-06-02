@@ -16,7 +16,7 @@ import PublicPage from '../routers/component/PublicPage';
 
 const MainView = () => {
   return (
-    <Suspense fallback={<></>}>
+    <Suspense fallback="Loading...">
       <PublicPage />
     </Suspense>
   );

@@ -10,10 +10,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    
-    @include respond(smallest-screen)
-    {
-        transform: translate(-120px,40px);   
+    border: 0.2rem solid #FEFF0B;
+    @include respond(x-screen){
+        transform: translate(-130px,30px); 
+    }
+    @include respond(small-screen){
+        transform: translate(-140px,38px); 
+    }
+    @include respond(xxs-screen){
+        transform: translate(-150px,44px); 
     }
     &__txt {
         font-size: 12px;
@@ -34,11 +39,24 @@
         
         padding: 4.5px 28px 12.5px 28px;
         font-size: 16px;
+        min-width: 170px;
         
-        transform: translate(0,40px); 
+        transform: translate(0,13px); 
         @include respond(small-screen)
         {
             transform: translate(0,30px); 
+        }
+        @include respond(xxs-screen)
+        {
+            transform: translate(0,60px); 
+        }
+        &.pm
+        {
+            background: #FAECB6;
+    
+         
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            border-radius: 18px;
         }
     }
     &.sz-large {
@@ -48,6 +66,9 @@
             width: 170px;
             
             transform: translate(0,40px); 
+            @include respond(xxs-screen){
+                margin-top: 15px;
+            }
     }
     &.sz-small {
        
@@ -68,18 +89,21 @@
         width: 107.14px;
         border-radius: 6.61603px;
  
-        transform: translate(0,40px); 
-        height: 28.41px;
-        @include respond(small-screen)
-        {
-        transform: translate(0,50px); 
-            
-        }
-        @include respond(smallest-screen)
-        {
         transform: translate(0,58px); 
-            
+        height: 28.41px;
+        @include respond (small-screen){
+        transform: translate(0,50px); 
         }
+        @include respond (xxs-screen){
+        transform: translate(0,40px); 
+        }
+        @include respond (sm-screen){
+        transform: translate(0,25px); 
+        }
+        @include respond (xl-screen){
+        transform: translate(0,-8px); 
+        }
+
         
     }   
     &.sz-xm{
@@ -107,6 +131,14 @@
         @include respond(smx-screen) {
             transform: translate(0,88px); 
         }
+        &.pm
+        {
+            background: #FAECB6;
+    
+    
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            border-radius: 18px;
+        }
     }
     &.sz-sxmm1{
         width: 245px;
@@ -123,4 +155,5 @@
         background: linear-gradient(180deg, #C2C2C2 0%, #969696 100%);
         user-select: none;
     }
+   
 }
