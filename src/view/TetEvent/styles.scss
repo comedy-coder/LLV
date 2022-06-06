@@ -1,0 +1,42 @@
+@import "../styles/mixin";
+.main-tetevent {
+    background-image: url(../../shared/assets/images/bg-tetevent.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+   
+    align-items: center;
+    flex-direction: column;
+    
+    &__buttongroup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 95%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        @include respond(small-screen){
+            margin-top: 106%;
+        }
+        @include respond(xxs-screen){
+            margin-top: 110%;
+        }
+
+        color: #FFFFFF;
+        &__title{
+            transform: translateY(30px);
+
+        }
+        span{
+            color: yellow;
+            font-size: 24px;
+        }
+      
+      
+    }
+}

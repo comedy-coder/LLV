@@ -1,7 +1,20 @@
 import Button from '@view/Button';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import './styles.scss';
-import { arrow, lc, llcb, llv, popupsk, popupxn, tvk, xn } from '@assets/images';
+import {
+  arrow,
+  caymai,
+  lc,
+  llcb,
+  llv,
+  llvtext,
+  mayphaui,
+  maytrai,
+  popupsk,
+  popupxn,
+  tvk,
+  xn,
+} from '@assets/images';
 import { Context } from 'src/store/provider';
 
 import { useHistory } from 'react-router';
@@ -16,7 +29,7 @@ const LlvHome = () => {
   const [isLogIn, setisLogin] = useState(true);
 
   useEffect(() => {
-    let count = JSON.parse(localStorage.getItem('count'));
+    let count = JSON.parse(localStorage.getItem('count') || '');
     if (count < 2) {
       setIsModalVisible(true);
       localStorage.setItem('count', '3');
@@ -58,6 +71,13 @@ const LlvHome = () => {
         )}
       </Modal>
       <Button icon={arrow} handleClick={handleBack} top="25px" />
+      <div className="main-llvhome__text">
+        <img srcSet={`${llvtext} 2x`} alt="" />
+      </div>
+      <div className="main-llvhome__tree">
+        <img srcSet={`${caymai} 2x`} alt="" />
+      </div>
+
       <div className="main-llvhome__buttongroup">
         <Button icon={llv} size={'xm'} handleClick={handleLLV}>
           còn {state.pushremaining} lượt

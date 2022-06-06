@@ -1,8 +1,8 @@
 @import "../styles/mixin";
 .main-llvhome {
-    background-image: url(../../shared/assets/images/bg-homellv.png);
+    background: url(../../shared/assets/images/bg-llvhome.png) no-repeat center center fixed;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: top;
     width: 100%;
     height: 100%;
@@ -10,22 +10,51 @@
    
     align-items: center;
     flex-direction: column;
-    
+    @include respond(md-screen){
+       background-size: 100% 100%;
+    }
+    &__text{
+        margin-top: -61px;
+        @include respond(small-screen){
+            margin-top: -54px;
+        }
+        @include respond(xxs-screen){
+            margin-top: -45px;
+        }
+    }
+    &__tree{
+        margin-top: -100px;
+        @include respond(small-screen){
+            margin-top: -96px;
+        }
+        @include respond(xxs-screen){
+            margin-top: -90px;
+        }
+    }
     &__buttongroup{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 118%;
-        @include respond(x-screen){
-            margin-top: 102%;
-        }
+        margin-top: -61px;
+       
         @include respond(small-screen){
-            margin-top: 113%;
+            margin-top: -25px;
         }
         @include respond(xxs-screen){
-            margin-top: 118%;
+            margin-top: -25px;
         }
+        @include respond(md-screen){
+            margin-top: 73%;
+        }
+        @include respond(mda-screen){
+            margin-top: 82%;
+        }
+        @include respond(xl-screen){
+            margin-top: 77%;
+        }
+        
+      
     }
 }
 .ant-modal-footer{

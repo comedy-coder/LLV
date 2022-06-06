@@ -1,0 +1,81 @@
+@import "../styles/mixin";
+.main-leaderboard {
+    background-image: url(../../shared/assets/images/bg-bxh.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+    
+    align-items: center;
+    flex-direction: column;
+    &__body{
+        background-image: url(../../shared/assets/images/bg-tinh.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+     
+        border-radius: 8px;
+        position: relative;
+        margin-top: -25px;
+    
+        width: 329px;
+        height: 495px;
+        
+        @include respond(small-screen){
+            height: 500px;
+        }
+        @include respond(xxs-screen){
+            height: 565px;
+        }
+        &.bg-toanquoc {
+            background-image: url(../../shared/assets/images/bg-toanquoc.png) ;
+        }
+        &.bg-chungket {
+            background-image: url(../../shared/assets/images/bg-chungket.png) ;
+        }
+    }
+    &__header{
+        margin-top: 60px;
+        @include respond(small-screen)
+        {
+            margin-top: 75px;
+        }
+        @include respond(small-screen)
+        {
+            margin-top: 90px;
+        }
+        width: 335px;
+height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+border-radius: 8px;
+            &__item{
+                background-image: url('../../shared/assets/images/tinh.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: top;
+                font-weight: 800;
+                font-size: 14px;
+                border-radius: 5px;
+                color: #9B5A17;
+                text-align: center;
+                border:none;
+                outline: none;
+                width: 95.52px;
+                height: 50px;
+                
+                &.active {
+                    color: #FFE933;
+                    background-image: url('../../shared/assets/images/toanquoc.png');
+                    border:none;
+                    outline: none;
+                }
+
+            }
+    }
+   
+}

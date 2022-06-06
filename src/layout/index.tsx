@@ -14,7 +14,27 @@ const BottomNav = [
   {
     icon: lxv,
     img: lixiic,
-    path: ['/lxvhome', '/lixi', '/quicklyanswer', '/fight', '/readyfight', '/findingenemy'],
+    path: [
+      '/lxvhome',
+      '/lixi',
+      '/quicklyanswer',
+      '/fight',
+      '/readyfight',
+      '/findingenemy',
+      '/winner',
+      '/tetevent',
+      '/winscrew',
+      '/screwhome',
+      '/findingenemyscrew',
+      '/fightscrew',
+      '/protectorhome',
+      '/readyfightprotector',
+      '/fightprotector',
+      '/findingenemyprotector',
+      '/rules',
+      '/leaderboard',
+      '/loser',
+    ],
   },
   {
     icon: kl,
@@ -26,7 +46,7 @@ const BottomNav = [
 const DefaultLayout: React.FC<PropsWithChildren<IDefaultLayoutProps>> = props => {
   const { pathname } = useLocation();
   const activeNav = BottomNav.findIndex(e => e.path.some(path => path === pathname));
-  console.log(BottomNav.findIndex(e => e.path.some(path => path === pathname)));
+
   return (
     <div className="all-page-component">
       <div className="main-component">{props.children}</div>

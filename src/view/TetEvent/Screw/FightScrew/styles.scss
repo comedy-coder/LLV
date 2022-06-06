@@ -1,0 +1,32 @@
+@import "../../../styles/mixin";
+.main-fightscrew {
+    background-image: url(../../../../shared/assets/images/bg-screwfight.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+   
+    align-items: center;
+    flex-direction: column;
+    &__group{
+        
+        margin-top: 47%;
+        @include respond(small-screen){
+            margin-top: 51%;
+            height: 485px;
+        }
+        @include respond(xxs-screen){
+            margin-top: 58%;
+            height: 485px;
+        }
+        background-image: url(../../../../shared/assets/images/screwgame.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+        width: 100%;
+         height: 448px;
+    }
+  
+}

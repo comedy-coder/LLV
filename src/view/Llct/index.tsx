@@ -57,7 +57,9 @@ const LLCt = () => {
           </div>
         ))}
       </div>
-      <Button icon={dct} handleClick={handleBack} size="sxm" />
+      <div className="main-llct__button">
+        <Button icon={dct} handleClick={handleBack} size="sxm" />
+      </div>
     </div>
   );
 };

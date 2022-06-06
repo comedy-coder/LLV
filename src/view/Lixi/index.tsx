@@ -11,8 +11,17 @@ const Lixi = () => {
   const handleBack = () => {
     history.push('/lxvhome');
   };
+  const handleTetEvent = () => {
+    history.push('/tetevent');
+  };
   const handleQuicklyAnswer = () => {
     history.push('/quicklyanswer');
+  };
+  const handleRules = () => {
+    history.push('/rules');
+  };
+  const handleLeader = () => {
+    history.push('/leaderboard');
   };
   return (
     <div className="main-lixi">
@@ -22,11 +31,11 @@ const Lixi = () => {
           Bạn đang có <span>{state.pushremaining}</span> lì xì
         </div>
         <Button icon={dntlx} size={'sxmm'} handleClick={handleQuicklyAnswer} />
-        <Button icon={ttlx} size={'sxmm1'} handleClick={handleBack}>
+        <Button icon={ttlx} size={'sxmm1'} handleClick={handleTetEvent}>
           12:00-13:00 | 18:00 - 20:00
         </Button>
-        <Button icon={luatchoi} primary size={'sxmm'} handleClick={handleBack} />
-        <Button icon={bxh} size={'sxmm'} primary handleClick={handleBack} />
+        <Button icon={luatchoi} primary size={'sxmm'} handleClick={handleRules} />
+        <Button icon={bxh} size={'sxmm'} primary handleClick={handleLeader} />
         <Button icon={dhtt} size={'sxmm1'} handleClick={handleBack}>
           12:00-13:00 | 18:00 - 20:00
         </Button>

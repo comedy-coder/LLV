@@ -1,6 +1,6 @@
 @import "../styles/mixin";
 .main-lixi{
-    background-image: url(../../shared/assets/images/bg-lixi.png);
+    background-image: url(../../shared/assets/images/bg-lixihome.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -14,11 +14,20 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 80%;
+        margin-top: 66%;
         font-weight: 400;
 font-size: 16px;
 line-height: 19px;
 font-weight: 600;
+  
+    @include respond(small-screen)
+    {
+        margin-top: 80%;
+    }
+    @include respond(xxs-screen)
+    {
+        margin-top: 88%;
+    }
 
 color: #333333;
         &__title{
