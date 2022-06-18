@@ -8,7 +8,7 @@ const authenticationPresenter = { ...authenticationRepository };
 authenticationPresenter.login = async (payload: ILoginDTO, remember = false) => {
   const token = await authenticationRepository.login(payload);
   store.dispatch(setToken({ token, remember }));
-  return token;
+  
 };
 
 authenticationPresenter.getProfile = () => {

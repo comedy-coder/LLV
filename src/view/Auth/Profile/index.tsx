@@ -21,8 +21,7 @@ import ModalChangePassWord from './components/ModalChangePassWord';
 import { routerViewProfile } from './router';
 
 const UserProfile = () => {
-  const history = useHistory();
-  const [form] = Form.useForm();
+  const history = useHistory();  const [form] = Form.useForm();
   const { formatMessage } = useAltaIntl();
   const [isVisible, setIsVisible] = useState(false);
   const [isDisableForm, setIsDisableForm] = useState(true);

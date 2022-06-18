@@ -1,4 +1,4 @@
-import { arrow, chiase, choi, huy, nhanloc, xn } from '@assets/images';
+import { arrow,  xn } from '@assets/images';
 import AnimatedPage from '@view/AnimatedRouter/AnimatedPage';
 import Button from '@view/Button';
 import React, { useEffect } from 'react';

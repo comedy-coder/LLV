@@ -17,7 +17,7 @@ const QuicklyAnswer = () => {
       <div className="main-quicklyanswer">
         <Button handleClick={handleBack} icon={arrow}></Button>
         <div className="main-quicklyanswer__button">
-          <Button handleClick={handleFind} icon={tdt} size="medium" primary />
+          <Button handleClick={handleFind} icon={tdt} size="medium" />
         </div>
       </div>
     </AnimatedPage>

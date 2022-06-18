@@ -154,7 +154,7 @@ const {{ pascalCase name }} = () => {
           defaultOption={filter }
           translateFirstKey='{{camelCase name}}'
           rowKey={(res) => res[idChooses]}
-          register={table}
+          register={9}
           columns={columns}
           onRowSelect={setSelectedRowKeys}
           dataSource={dataTable}

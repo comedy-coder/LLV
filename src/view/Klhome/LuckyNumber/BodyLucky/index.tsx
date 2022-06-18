@@ -4,6 +4,7 @@ import { BodyProps } from './interface';
 const BodyLucky = ({ item }: BodyProps) => {
   return (
     <div className="main-bodylucky">
+        
       {item.map((item: any, index: any) => (
         <div className="bodylucky-item" key={index}>
           <img srcSet={`${item.img} 2x`} />

@@ -13,6 +13,20 @@
     @include respond(md-screen){
        background-size: 100% 100%;
     }
+    &__clound{
+        position: fixed;
+        bottom: 42px;
+        width: 100%;
+        @include respond(md-screen){
+            bottom: 9px
+        }
+        @include respond(xl-screen){
+            bottom: -8px;
+        }
+        img{
+            width: 100%;
+        }
+    }
     &__text{
         margin-top: -61px;
         @include respond(small-screen){
@@ -21,14 +35,50 @@
         @include respond(xxs-screen){
             margin-top: -45px;
         }
+        @include respond(md-screen){
+            margin-top: -50px;
+
+        }
+        @include respond(mda-screen){
+            margin-top: -50px;
+            img {
+                height: 225px;
+            }
+        }
+        @include respond(xl-screen){
+            margin-top: 0px;
+           img{
+            width: 360px;
+        }
+        }
     }
     &__tree{
         margin-top: -100px;
+
         @include respond(small-screen){
             margin-top: -96px;
         }
         @include respond(xxs-screen){
             margin-top: -90px;
+            img{
+                height: 450px;
+            }
+           
+        }
+        @include respond(md-screen){
+            img{
+                height: 500px;
+            }
+        }
+        @include respond(mda-screen){
+            img{
+                height: 610px;
+            }
+        }
+        @include respond(xl-screen){
+           img{
+            height: 667px;
+           }
         }
     }
     &__buttongroup{
@@ -45,13 +95,13 @@
             margin-top: -25px;
         }
         @include respond(md-screen){
-            margin-top: 73%;
+            margin-top: 0;
         }
         @include respond(mda-screen){
-            margin-top: 82%;
+            margin-top: 0;
         }
         @include respond(xl-screen){
-            margin-top: 77%;
+            margin-top: 0;
         }
         
       

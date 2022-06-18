@@ -15,6 +15,7 @@ export const getListPermissions = (
     showSuccess: false,
     showError: false,
     params,
+  
     convert: res => {
       return {
         data: PermissionsEntity.createListPermissions(res?.pagedData),

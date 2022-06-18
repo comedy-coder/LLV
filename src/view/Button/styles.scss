@@ -24,12 +24,12 @@
     @include respond(md-screen){
         min-height: 55px;
         min-width: 64px;
-        transform: translate(-173px,44px); 
+        transform: translate(-290px,44px); 
     }
     @include respond(xl-screen){
         min-height: 55px;
         min-width: 64px;
-        transform: translate(-210px,44px); 
+        transform: translate(-385px,44px); 
     }
     &__txt {
         font-size: 12px;

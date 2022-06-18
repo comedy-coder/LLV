@@ -1,28 +1,17 @@
 import Button from '@view/Button';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import './styles.scss';
-import {
-  arrow,
-  caymai,
-  lc,
-  llcb,
-  llv,
-  llvtext,
-  mayphaui,
-  maytrai,
-  popupsk,
-  popupxn,
-  tvk,
-  xn,
-} from '@assets/images';
+import { arrow, caymai, cloundllvhome, lc, llcb, llv, llvtext } from '@assets/images';
 import { Context } from 'src/store/provider';
-
+import { UserSelector } from '@modules/authentication/profileStore';
 import { useHistory } from 'react-router';
-import { Modal } from 'antd';
-import { stringify } from 'querystring';
+
 import { pushedButton } from 'src/store/action';
+import { useDispatch, useSelector } from 'react-redux';
 
 const LlvHome = () => {
+  const { user } = useSelector(UserSelector);
+  const dispatch1 = useDispatch();
   const history = useHistory();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [state, dispatch] = useContext(Context);
@@ -30,6 +19,7 @@ const LlvHome = () => {
 
   useEffect(() => {
     let count = JSON.parse(localStorage.getItem('count') || '');
+    console.log(user?.userFullName);
     if (count < 2) {
       setIsModalVisible(true);
       localStorage.setItem('count', '3');
@@ -53,23 +43,6 @@ const LlvHome = () => {
   };
   return (
     <div className="main-llvhome">
-      <Modal visible={isModalVisible}>
-        {isLogIn ? (
-          <>
-            <div className="button-position">
-              <Button icon={tvk} size={'large'} handleClick={() => setisLogin(false)} />
-            </div>
-            <img srcSet={`${popupsk} 2x`} alt="" />
-          </>
-        ) : (
-          <>
-            <div className="button-position1">
-              <Button icon={xn} size={'large'} handleClick={hanldeCloseModal} />
-            </div>
-            <img srcSet={`${popupxn} 2x`} alt="" />
-          </>
-        )}
-      </Modal>
       <Button icon={arrow} handleClick={handleBack} top="25px" />
       <div className="main-llvhome__text">
         <img srcSet={`${llvtext} 2x`} alt="" />
@@ -84,6 +57,9 @@ const LlvHome = () => {
         </Button>
         <Button icon={llcb} size={'large'} handleClick={handleNext} />
         <Button icon={lc} size={'large'} handleClick={hanldeLLCB} />
+      </div>
+      <div className="main-llvhome__clound">
+        <img srcSet={`${cloundllvhome} 2x`} alt="" />
       </div>
     </div>
   );

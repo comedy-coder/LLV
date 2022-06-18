@@ -101,6 +101,7 @@ interface IUser {
 
 export const UserSelector: Selector<RootState, IUser> = state => {
   return {
+    
     user: state.profile.user,
     status: state.profile.statusLogin || false,
   };

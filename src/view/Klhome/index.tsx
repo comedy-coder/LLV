@@ -93,6 +93,7 @@ const KLhome = () => {
       img: phm50k,
     },
   ];
+  console.log(Object.assign(Gifts, Gifts1));
   const bodyState = [{ content: [...Gifts] }, { content: [...Gifts1] }];
   const handleBack = () => {
     history.push('./choicepage');
